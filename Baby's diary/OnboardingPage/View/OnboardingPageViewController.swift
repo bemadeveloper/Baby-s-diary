@@ -9,8 +9,11 @@ import UIKit
 
 class OnboardingPageViewController: UIViewController {
     
-    private let onboardingPageView = OnboardingPageView()
     private let viewModel: OnboardingPageViewModel
+    
+    private var onboardingPageView: OnboardingPageView {
+        return self.view as! OnboardingPageView
+    }
     
     // MARK: - Inits
     
@@ -25,30 +28,19 @@ class OnboardingPageViewController: UIViewController {
     
     // MARK: - Lyfecycle
     
+    override func loadView() {
+        self.view = OnboardingPageView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        bindViewModel()
     }
     
     // MARK: - Setups
     
     private func setupUI() {
-        view.addSubview(onboardingPageView)
-        
-        onboardingPageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            onboardingPageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            onboardingPageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            onboardingPageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            onboardingPageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        view.backgroundColor = .white
+        onboardingPageView.configure(with: viewModel)
     }
-    
-    private func bindViewModel() {
-        onboardingPageView.configure(with: viewModel.model)
-    }
-
-
-
 }

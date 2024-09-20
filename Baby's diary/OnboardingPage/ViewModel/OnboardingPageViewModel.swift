@@ -10,7 +10,6 @@ import Foundation
 class OnboardingPageViewModel {
     let model: OnboardingPageModel
     
-    
     init(model: OnboardingPageModel) {
         self.model = model
     }

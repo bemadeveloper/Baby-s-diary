@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let model = OnboardingPageModel(imageName: "baby", title: "Hi there", description: "Lofbduer")
+        let model = OnboardingPageModel(imageName: "baby", title: "Hi there!", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
         let viewModel = OnboardingPageViewModel(model: model)
         let onboardingVC = OnboardingPageViewController(viewModel: viewModel)
         
