@@ -83,11 +83,9 @@ class OnboardingPageView: UIView {
         ])
     }
     
-    func configure(with viewModel: OnboardingPageViewModel) {
-        print("Title: \(viewModel.model.title)")
-            print("Description: \(viewModel.model.description)")
-        imageView.image = UIImage(named: viewModel.model.imageName)
-        titleLabel.text = viewModel.model.title
-        descriptionLabel.text = viewModel.model.description
+    func setupUI(imageName: String, title: String, description: String) {
+        imageView.image = UIImage(named: imageName)
+        titleLabel.text = title
+        descriptionLabel.text = description
     }
 }

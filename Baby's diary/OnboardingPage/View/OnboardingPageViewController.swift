@@ -41,6 +41,6 @@ class OnboardingPageViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .white
-        onboardingPageView.configure(with: viewModel)
+        onboardingPageView.setupUI(imageName: viewModel.model.imageName, title: viewModel.model.title, description: viewModel.model.description)
     }
 }
