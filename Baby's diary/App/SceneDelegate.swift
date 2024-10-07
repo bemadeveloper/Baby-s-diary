@@ -15,12 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let model = OnboardingPageModel(imageName: "baby", title: "Hi there!", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        let viewModel = OnboardingPageViewModel(model: model)
-        let onboardingVC = OnboardingPageViewController(viewModel: viewModel)
+       
+        let onboardingModel = OnboardingModel(pages: [OnboardingPageModel(imageName: "baby", title: "Hi there!", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."), OnboardingPageModel(imageName: "baby", title: "Hi there!", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."), OnboardingPageModel(imageName: "baby", title: "Hi there!", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."), ])
         
         window = UIWindow(windowScene: windowScene)
-        let viewController = onboardingVC
+        let viewController = OnboardingViewController(viewModel: OnboardingViewModel(model: onboardingModel))
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

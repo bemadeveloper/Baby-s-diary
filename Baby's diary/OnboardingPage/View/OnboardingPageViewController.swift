@@ -11,6 +11,7 @@ class OnboardingPageViewController: UIViewController {
     
     private let viewModel: OnboardingPageViewModel
     
+    
     private var onboardingPageView: OnboardingPageView {
         return self.view as! OnboardingPageView
     }

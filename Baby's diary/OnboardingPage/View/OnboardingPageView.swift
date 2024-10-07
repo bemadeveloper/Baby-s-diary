@@ -71,13 +71,13 @@ class OnboardingPageView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 70),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
             imageView.heightAnchor.constraint(equalToConstant: 400),
             
-            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 3),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
