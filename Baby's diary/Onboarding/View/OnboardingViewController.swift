@@ -95,6 +95,7 @@ class OnboardingViewController: UIViewController {
         let nextViewController = viewControllers[viewModel.currentPageIndex]
         pageViewController.setViewControllers([nextViewController], direction: .forward, animated: true)
         mainView.updatePageControl(currentPage: viewModel.currentPageIndex)
+        mainView.setButtonTitle(isLastPage: viewModel.isLastPage)
     }
     
     @objc private func pageControlTapped() {

@@ -26,8 +26,8 @@ class OnboardingView: UIView {
     
     lazy var nextButton: UIButton = {
         let nextButton = UIButton()
-        nextButton.setTitle("Дальше", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
+        nextButton.setTitle("Дальше", for: .normal)
         nextButton.backgroundColor = .systemBlue
         nextButton.layer.cornerRadius = 10
         return nextButton
@@ -72,7 +72,7 @@ class OnboardingView: UIView {
             skipButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
             nextButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            nextButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
+            nextButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
             nextButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -20),
@@ -91,6 +91,10 @@ class OnboardingView: UIView {
             pageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             pageView.bottomAnchor.constraint(equalTo: pageControl.topAnchor)
         ])
+    }
+    
+    func setButtonTitle(isLastPage: Bool = false) {
+        nextButton.setTitle(isLastPage ? "Завершить" : "Дальше", for: .normal)
     }
     
     func updatePageControl(currentPage: Int) {
