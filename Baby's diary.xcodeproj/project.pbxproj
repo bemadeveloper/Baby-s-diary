@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7899F722CB8382E00431BD3 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7899F712CB8382E00431BD3 /* UserDefaultsKeys.swift */; };
+		D7899F752CB83E0200431BD3 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7899F742CB83E0200431BD3 /* NewViewController.swift */; };
 		D789FFC92C9AED9B00528573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789FFC82C9AED9B00528573 /* AppDelegate.swift */; };
 		D789FFCB2C9AED9B00528573 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789FFCA2C9AED9B00528573 /* SceneDelegate.swift */; };
 		D789FFD22C9AED9D00528573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D789FFD12C9AED9D00528573 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7899F712CB8382E00431BD3 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		D7899F742CB83E0200431BD3 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		D789FFC52C9AED9B00528573 /* Baby's diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby's diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D789FFC82C9AED9B00528573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D789FFCA2C9AED9B00528573 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7899F702CB8382300431BD3 /* UserDefaultsKeys */ = {
+			isa = PBXGroup;
+			children = (
+				D7899F712CB8382E00431BD3 /* UserDefaultsKeys.swift */,
+			);
+			path = UserDefaultsKeys;
+			sourceTree = "<group>";
+		};
+		D7899F762CBD674500431BD3 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D7899F7A2CBD6B3F00431BD3 /* Model */,
+				D7899F782CBD6AFB00431BD3 /* ViewModel */,
+				D7899F792CBD6B1600431BD3 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		D7899F782CBD6AFB00431BD3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7899F792CBD6B1600431BD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7899F7A2CBD6B3F00431BD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D789FFBC2C9AED9B00528573 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D789FFDC2C9AEEAB00528573 /* App */,
+				D7899F762CBD674500431BD3 /* SignIn */,
 				D789FFEE2CA2C9A900528573 /* Onboarding */,
 				D789FFDE2C9AFA1500528573 /* OnboardingPage */,
 				D789FFDD2C9AEEB900528573 /* Resources */,
@@ -133,6 +177,7 @@
 		D789FFEE2CA2C9A900528573 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				D7899F702CB8382300431BD3 /* UserDefaultsKeys */,
 				D789FFEF2CA2C9DA00528573 /* Model */,
 				D789FFF02CA2C9E000528573 /* ViewModel */,
 				D789FFF12CA2C9ED00528573 /* View */,
@@ -161,6 +206,7 @@
 			children = (
 				D789FFF22CA2CCD400528573 /* OnboardingView.swift */,
 				D789FFF42CA2CD3F00528573 /* OnboardingViewController.swift */,
+				D7899F742CB83E0200431BD3 /* NewViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,8 +284,10 @@
 				D789FFE52C9AFACD00528573 /* OnboardingPageViewController.swift in Sources */,
 				D789FFE72C9AFBA500528573 /* OnboardingPageViewModel.swift in Sources */,
 				D789FFE32C9AFAAC00528573 /* OnboardingPageView.swift in Sources */,
+				D7899F752CB83E0200431BD3 /* NewViewController.swift in Sources */,
 				D789FFF32CA2CCD400528573 /* OnboardingView.swift in Sources */,
 				D789FFED2CA0598500528573 /* OnboardingViewModel.swift in Sources */,
+				D7899F722CB8382E00431BD3 /* UserDefaultsKeys.swift in Sources */,
 				D789FFC92C9AED9B00528573 /* AppDelegate.swift in Sources */,
 				D789FFEB2CA058DA00528573 /* OnboardingModel.swift in Sources */,
 				D789FFF52CA2CD3F00528573 /* OnboardingViewController.swift in Sources */,

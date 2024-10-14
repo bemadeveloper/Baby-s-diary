@@ -10,10 +10,13 @@ import Foundation
 class OnboardingViewModel {
     
     let model: OnboardingModel
-    var currentPageIndex = 0
+    private(set) var currentPageIndex: Int = 0
     
     var showAlert: ((String) -> ())?
     
+    var isLastPage: Bool {
+        currentPageIndex == model.pages.count - 1
+    }
     
     init(model: OnboardingModel) {
         self.model = model
@@ -21,10 +24,6 @@ class OnboardingViewModel {
     
     func numberOfPages() -> Int {
         return model.pages.count
-    }
-    
-    func getPage(at index: Int) -> OnboardingPageModel {
-        return model.pages[index]
     }
     
     func currentPage() -> OnboardingPageModel {
@@ -35,6 +34,10 @@ class OnboardingViewModel {
         if currentPageIndex < model.pages.count - 1 {
             currentPageIndex += 1
         }
+    }
+    
+    func finishOnboarding() {
+        UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.hasCompletedOnboarding)
     }
     
   
